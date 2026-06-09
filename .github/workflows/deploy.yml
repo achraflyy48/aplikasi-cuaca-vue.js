@@ -2,7 +2,7 @@ name: Deploy Aplikasi Cuaca ke GitHub Pages
 
 on:
   push:
-    branches: ["main"] # Pastikan ini sesuai dengan nama branch utama kamu (main/master)
+    branches: ["main"]
   workflow_dispatch:
 
 permissions:
@@ -29,7 +29,7 @@ jobs:
           node-version: 20
           cache: 'npm'
       - name: Install dependencies
-        run: npm ci
+        run: npm install
       - name: Build project
         run: npm run build
       - name: Setup Pages
